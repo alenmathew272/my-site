@@ -1,41 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Herbal Cream</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        .box {
-            background: white;
-            padding: 20px;
-            margin: 50px auto;
-            width: 300px;
-            border-radius: 10px;
-        }
-        button {
-            padding: 10px;
-            background: green;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Herbal Glow Cream</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #a8e063, #56ab2f);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Glass Card */
+.container {
+    margin: auto;
+    width: 115%;
+    max-width: 1000px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+/* Image */
+.image img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.4s;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+/* Content */
+.content {
+    flex: 1;
+    color: white;
+}
+
+.content h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-bottom: 12px;
+}
+
+/* Features */
+.features {
+    margin: 15px 0;
+}
+
+.features li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    background: white;
+    color: #2e7d32;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2e7d32;
+    color: white;
+    transform: scale(1.05);
+}
+
+#msg {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+</style>
+
 </head>
+
 <body>
 
-<div class="box">
-    <h2>Herbal Cream</h2>
-    <p>Natural skincare solution</p>
-    <button onclick="buy()">Buy Now</button>
-    <p id="msg"></p>
+<header>
+🌿 Herbal Glow Cream
+</header>
+
+<div class="container">
+
+    <div class="image">
+        <img src="https://dwibhashi.co.in/cdn/shop/files/Facecream_1_copy_4.jpg?v=1733465855" alt="Product">
+    </div>
+
+    <div class="content">
+        <h2>Natural Skin Care Solution</h2>
+
+        <p>
+            Experience the power of nature with Herbal Glow Cream.
+            Designed to hydrate, nourish, and rejuvenate your skin.
+        </p>
+
+        <ul class="features">
+            <li>✔ 100% Natural Ingredients</li>
+            <li>✔ Suitable for All Skin Types</li>
+            <li>✔ Dermatologically Tested</li>
+        </ul>
+
+        <p><b>Price: ₹299</b></p>
+
+        <button onclick="buy()">Buy Now</button>
+
+        <p id="msg"></p>
+    </div>
+
 </div>
+
+<footer>
+© 2026 Herbal Care | All Rights Reserved
+</footer>
 
 <script>
 function buy() {
-    document.getElementById("msg").innerText = "Purchase Successful!";
+    document.getElementById("msg").innerText = "🎉 Purchase Successful!";
 }
 </script>
 
