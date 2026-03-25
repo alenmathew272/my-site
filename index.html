@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Serverless Site</title>
+    <title>Herbal Cream</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            width: 300px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello from Cloudflare Pages</h1>
-    <p>This is my deployed static website.</p>
+
+<div class="box">
+    <h2>Herbal Cream</h2>
+    <p>Natural skincare solution</p>
+    <button onclick="buy()">Buy Now</button>
+    <p id="msg"></p>
+</div>
+
+<script>
+function buy() {
+    document.getElementById("msg").innerText = "Purchase Successful!";
+}
+</script>
+
 </body>
 </html>
